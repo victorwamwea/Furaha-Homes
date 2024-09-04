@@ -1,11 +1,11 @@
-Realvine - Choose your dream place
+Furaha Homes - Choose your dream place
 
 
 
 #---------- HEADER ----------#
 
 <ion-icon name="business-outline"></ion-icon>
-Realvine
+Furaha Homes
 
 Home
 Buy
@@ -27,7 +27,7 @@ aria-label = Toggle menu
 
 We will help you find your Wonderful home
 
-A great plateform to buy, sell and rent your properties without any agent or commisions.
+A great platform to buy, sell and rent your properties without any agent or commisions.
 
 Buy 
 Sell 
@@ -80,8 +80,7 @@ aria-label = play video
 <ion-icon name="play" aria-hidden="true"></ion-icon>
 
 Efficiency. Transparency. Control.
-
-Hously developed a platform for the Real Estate marketplace that allows buyers and sellers to easily execute a transaction on their own. The platform drives efficiency, cost transparency and control into the hands of the consumers. Hously is Real Estate Redefined.
+I developed a platform for the Real Estate marketplace that allows buyers and sellers to easily execute a transaction on their own. The platform drives efficiency, cost transparency and control into the hands of the consumers. Furaha Homes is Real Estate Redefined.
 
 Learn More
 
@@ -183,7 +182,7 @@ Subscribe
 #---------- FOOTER ----------#
 
 <ion-icon name="business-outline"></ion-icon>
-Realvine
+Furaha Homes
 
 A great plateform to buy, sell and rent your properties without any agent or commisions.
 
@@ -219,7 +218,7 @@ contact@example.com
 <ion-icon name="call-outline"></ion-icon>
 +152 534-468-854
 
-&copy; 2022 Realvine. All Right Reserved by codewithsadee.
+&copy; 2022 Furaha Homes. All Right Reserved by codewithsadee.
 
 <ion-icon name="logo-facebook"></ion-icon>
 <ion-icon name="logo-instagram"></ion-icon>

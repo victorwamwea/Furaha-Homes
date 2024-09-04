@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Realvine - Choose your dream place</title>
+  <title>Furaha Homes - Choose your dream place</title>
 
   <!-- 
     - favicon
@@ -24,6 +24,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700&display=swap"
     rel="stylesheet">
+    
 </head>
 
 <body id="top">
@@ -36,53 +37,104 @@
     <div class="container">
 
       <a href="#" class="logo">
-        <ion-icon name="business-outline"></ion-icon> Realvine
+        <ion-icon name="business-outline"></ion-icon> Furaha Homes
       </a>
 
       <nav class="navbar container" data-navbar>
         <ul class="navbar-list">
 
           <li>
-            <a href="#" class="navbar-link" data-nav-link>Home</a>
+            <a href="#Home" class="navbar-link" data-nav-link>Home</a>
           </li>
 
           <li>
-            <a href="#" class="navbar-link" data-nav-link>Buy</a>
+            <a href="#Buy" class="navbar-link" data-nav-link>Buy</a>
           </li>
 
           <li>
-            <a href="#" class="navbar-link" data-nav-link>Sell</a>
+            <a href="#Sell" class="navbar-link" data-nav-link>Sell</a>
           </li>
 
           <li>
-            <a href="#" class="navbar-link" data-nav-link>Listing</a>
+            <a href="#Listing" class="navbar-link" data-nav-link>Listing</a>
           </li>
 
           <li>
-            <a href="#" class="navbar-link" data-nav-link>About Us</a>
+            <a href="#About Us" class="navbar-link" data-nav-link>About Us</a>
           </li>
 
           <li>
-            <a href="#" class="navbar-link" data-nav-link>Contact</a>
+            <a href="#Contact" class="navbar-link" data-nav-link>Contact</a>
           </li>
 
         </ul>
       </nav>
 
-      <a href="#" class="btn btn-secondary">Signup</a>
+      <button class="btn" id="signupBtn">Sign Up</button>
 
       <button class="nav-toggle-btn" aria-label="Toggle menu" data-nav-toggler>
         <ion-icon name="menu-outline" aria-hidden="true" class="menu-icon"></ion-icon>
         <ion-icon name="close-outline" aria-hidden="true" class="close-icon"></ion-icon>
       </button>
 
+      <div class="modal" id="modal">
+        <div class="modal-content">
+            <span class="close-btn" id="close-btn">&times;</span>
+            <div class="container">
+              
+                <form class="form" id="login">
+                    <h1 class="form__title">Login</h1>
+                    <div class="form__message form__message--error"></div>
+                    <div class="form__input-group">
+                        <input type="text" class="form__input" autofocus placeholder="Username or email">
+                        <div class="form__input-error-message"></div>
+                    </div>
+                    <div class="form__input-group">
+                        <input type="password" class="form__input" autofocus placeholder="Password">
+                        <div class="form__input-error-message"></div>
+                    </div>
+                    <button class="form__button" type="submit">Continue</button>
+                    <p class="form__text">
+                        <a href="#" class="form__link">Forgot your password?</a>
+                    </p>
+                    <p class="form__text">
+                        <a class="form__link" href="#" id="linkCreateAccount">Create account</a>
+                    </p>
+                </form>
+                <form class="form form--hidden" id="createAccount">
+                    <h1 class="form__title">Create Account</h1>
+                    <div class="form__message form__message--error"></div>
+                    <div class="form__input-group">
+                        <input type="text" id="signupUsername" class="form__input" autofocus placeholder="Username">
+                        <div class="form__input-error-message"></div>
+                    </div>
+                    <div class="form__input-group">
+                        <input type="text" class="form__input" autofocus placeholder="Email Address">
+                        <div class="form__input-error-message"></div>
+                    </div>
+                    <div class="form__input-group">
+                        <input type="password" class="form__input" autofocus placeholder="Password">
+                        <div class="form__input-error-message"></div>
+                    </div>
+                    <div class="form__input-group">
+                        <input type="password" class="form__input" autofocus placeholder="Confirm password">
+                        <div class="form__input-error-message"></div>
+                    </div>
+                    <button class="form__button" type="submit">Continue</button>
+                    <p class="form__text">
+                        <a class="form__link" href="#" id="linkLogin">Already have an account? Sign in</a>
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
     </div>
   </header>
 
 
 
 
-
+<div class="page-content">
   <main>
     <article class="article">
 
@@ -101,7 +153,7 @@
               </h1>
 
               <p class="hero-text">
-                A great plateform to buy, sell and rent your properties without any agent or commisions.
+                A great platform to buy, sell and rent your properties without any agent or commisions.
               </p>
 
             </div>
@@ -137,7 +189,7 @@
                   <option value="house">House</option>
                   <option value="apartment">Apartment</option>
                   <option value="offices">Offices</option>
-                  <option value="townhome">Townhome</option>
+                  <option value="Air BnB">Air BNB</option>
 
                 </select>
               </div>
@@ -153,8 +205,8 @@
                   <option value="2000">2000</option>
                   <option value="3000">3000</option>
                   <option value="4000">4000</option>
-                  <option value="5000">5000</option>
-                  <option value="6000">6000</option>
+                  <option value="$5000">5000</option>
+                  <option value="$6000">6000</option>
 
                 </select>
               </div>
@@ -165,13 +217,13 @@
                 <select name="max-price" id="max-price" class="dropdown-list">
 
                   <option value="max price">Max Price</option>
-                  <option value="500">500</option>
-                  <option value="1000">1000</option>
-                  <option value="2000">2000</option>
-                  <option value="3000">3000</option>
-                  <option value="4000">4000</option>
-                  <option value="5000">5000</option>
-                  <option value="6000">6000</option>
+                  <option value="$500">500</option>
+                  <option value="$1000">1000</option>
+                  <option value="$2000">2000</option>
+                  <option value="$3000">3000</option>
+                  <option value="$4000">4000</option>
+                  <option value="$5000">5000</option>
+                  <option value="$6000">6000</option>
 
                 </select>
               </div>
@@ -209,11 +261,11 @@
             <h2 class="h2 section-title">Efficiency. Transparency. Control.</h2>
 
             <p class="section-text">
-              Hously developed a platform for the Real Estate marketplace that allows buyers and sellers to easily
+              Furaha Homes developed a platform for the Real Estate marketplace that allows buyers and sellers to easily
               execute a
               transaction on their own. The platform drives efficiency, cost transparency and control into the hands of
               the consumers.
-              Hously is Real Estate Redefined.
+              Furaha Homes is Real Estate Redefined.
             </p>
 
             <a href="#" class="btn btn-primary">Learn More</a>
@@ -237,7 +289,7 @@
           <h2 class="h2 section-title">How It Works</h2>
 
           <p class="section-text">
-            A great plateform to buy, sell and rent your properties without any agent or commisions.
+            A great platform to buy, sell and rent your properties without any agent or commisions.
           </p>
 
           <ul class="service-list">
@@ -252,7 +304,7 @@
                 <h3 class="h3 card-title">Evaluate Property</h3>
 
                 <p class="card-text">
-                  If the distribution of letters and 'words' is random, the reader will not be distracted from making.
+                  <p class="card-text">Discover the true value of your property with our expert evaluation. Accurate, reliable, and tailored just for you.</p>
                 </p>
 
               </div>
@@ -268,7 +320,7 @@
                 <h3 class="h3 card-title">Meeting with Agent</h3>
 
                 <p class="card-text">
-                  If the distribution of letters and 'words' is random, the reader will not be distracted from making.
+                  Schedule a meeting with our experienced agents to get personalized advice and insights tailored to your needs.
                 </p>
 
               </div>
@@ -284,7 +336,7 @@
                 <h3 class="h3 card-title">Close the Deal</h3>
 
                 <p class="card-text">
-                  If the distribution of letters and 'words' is random, the reader will not be distracted from making.
+                  Seamlessly finalize your property transactions with our expert guidance, ensuring a smooth and hassle-free process.
                 </p>
 
               </div>
@@ -309,7 +361,7 @@
           <h2 class="h2 section-title">Featured Properties</h2>
 
           <p class="section-text">
-            A great plateform to buy, sell and rent your properties without any agent or commisions.
+            A great platform to buy, sell and rent your properties without any agent or commisions.
           </p>
 
           <ul class="property-list">
@@ -329,7 +381,7 @@
                 <div class="card-content">
 
                   <h3 class="h3">
-                    <a href="#" class="card-title">10765 Hillshire Ave, Baton Rouge, LA 70810, USA</a>
+                    <a href="#" class="card-title"> Kahawa West, Nairobi, 00100, Kenya</a>
                   </h3>
 
                   <ul class="card-list">
@@ -339,7 +391,7 @@
                         <ion-icon name="cube-outline"></ion-icon>
                       </div>
 
-                      <span class="item-text">8000sqf</span>
+                      <span class="item-text">Outdoor space</span>
                     </li>
 
                     <li class="card-item">
@@ -347,7 +399,7 @@
                         <ion-icon name="bed-outline"></ion-icon>
                       </div>
 
-                      <span class="item-text">4 Beds</span>
+                      <span class="item-text">4 Bedrooms</span>
                     </li>
 
                     <li class="card-item">
@@ -356,6 +408,14 @@
                       </div>
 
                       <span class="item-text">4 Baths</span>
+                    </li>
+
+                    <li class="card-item">
+                      <div class="item-icon">
+                        <ion-icon name="car-outline"></ion-icon>
+                      </div>
+
+                      <span class="item-text">Parking Space</span>
                     </li>
 
                   </ul>
@@ -380,8 +440,6 @@
                           <ion-icon name="star"></ion-icon>
                           <ion-icon name="star"></ion-icon>
                         </div>
-
-                        <span>5.0(30)</span>
 
                       </span>
                     </div>
@@ -408,7 +466,7 @@
                 <div class="card-content">
 
                   <h3 class="h3">
-                    <a href="#" class="card-title">59345 STONEWALL DR, Plaquemine, LA 70764, USA</a>
+                    <a href="#" class="card-title"> Kileleshwa, Nairobi, 00800, Kenya</a>
                   </h3>
 
                   <ul class="card-list">
@@ -418,7 +476,7 @@
                         <ion-icon name="cube-outline"></ion-icon>
                       </div>
 
-                      <span class="item-text">8000sqf</span>
+                      <span class="item-text">Outdoor Space</span>
                     </li>
 
                     <li class="card-item">
@@ -426,7 +484,7 @@
                         <ion-icon name="bed-outline"></ion-icon>
                       </div>
 
-                      <span class="item-text">4 Beds</span>
+                      <span class="item-text">4 Bedrooms</span>
                     </li>
 
                     <li class="card-item">
@@ -435,6 +493,14 @@
                       </div>
 
                       <span class="item-text">4 Baths</span>
+                    </li>
+
+                    <li class="card-item">
+                      <div class="item-icon">
+                        <ion-icon name="car-outline"></ion-icon>
+                      </div>
+
+                      <span class="item-text">Parking space</span>
                     </li>
 
                   </ul>
@@ -459,8 +525,6 @@
                           <ion-icon name="star"></ion-icon>
                           <ion-icon name="star"></ion-icon>
                         </div>
-
-                        <span>5.0(30)</span>
 
                       </span>
                     </div>
@@ -487,7 +551,7 @@
                 <div class="card-content">
 
                   <h3 class="h3">
-                    <a href="#" class="card-title">3723 SANDBAR DR, Addis, LA 70710, USA</a>
+                    <a href="#" class="card-title"> Delta Corner, Kileleshwa, Nairobi, 00800, Kenya</a>
                   </h3>
 
                   <ul class="card-list">
@@ -497,7 +561,7 @@
                         <ion-icon name="cube-outline"></ion-icon>
                       </div>
 
-                      <span class="item-text">8000sqf</span>
+                      <span class="item-text">Outdoor Space</span>
                     </li>
 
                     <li class="card-item">
@@ -505,7 +569,7 @@
                         <ion-icon name="bed-outline"></ion-icon>
                       </div>
 
-                      <span class="item-text">4 Beds</span>
+                      <span class="item-text">4 Bedrooms</span>
                     </li>
 
                     <li class="card-item">
@@ -513,7 +577,14 @@
                         <ion-icon name="man-outline"></ion-icon>
                       </div>
 
-                      <span class="item-text">4 Baths</span>
+                      <span class="item-text">2 Baths</span>
+                    </li>
+                    <li class="card-item">
+                      <div class="item-icon">
+                        <ion-icon name="car-outline"></ion-icon>
+                      </div>
+
+                      <span class="item-text">Parking Space</span>
                     </li>
 
                   </ul>
@@ -523,7 +594,7 @@
                     <div>
                       <span class="meta-title">Price</span>
 
-                      <span class="meta-text">$5000</span>
+                      <span class="meta-text">$3000</span>
                     </div>
 
                     <div>
@@ -536,10 +607,8 @@
                           <ion-icon name="star"></ion-icon>
                           <ion-icon name="star"></ion-icon>
                           <ion-icon name="star"></ion-icon>
-                          <ion-icon name="star"></ion-icon>
+                          
                         </div>
-
-                        <span>5.0(30)</span>
 
                       </span>
                     </div>
@@ -566,7 +635,7 @@
                 <div class="card-content">
 
                   <h3 class="h3">
-                    <a href="#" class="card-title">LOT 21 ROYAL OAK DR, Prairieville, LA 70769, USA</a>
+                    <a href="#" class="card-title">Kahawa Sukari, Nairobi, 20100, Kenya</a>
                   </h3>
 
                   <ul class="card-list">
@@ -584,7 +653,7 @@
                         <ion-icon name="bed-outline"></ion-icon>
                       </div>
 
-                      <span class="item-text">4 Beds</span>
+                      <span class="item-text">2 Board Rooms</span>
                     </li>
 
                     <li class="card-item">
@@ -592,7 +661,7 @@
                         <ion-icon name="man-outline"></ion-icon>
                       </div>
 
-                      <span class="item-text">4 Baths</span>
+                      <span class="item-text">Office Spaces</span>
                     </li>
 
                   </ul>
@@ -602,7 +671,7 @@
                     <div>
                       <span class="meta-title">Price</span>
 
-                      <span class="meta-text">$5000</span>
+                      <span class="meta-text">$7000</span>
                     </div>
 
                     <div>
@@ -618,7 +687,6 @@
                           <ion-icon name="star"></ion-icon>
                         </div>
 
-                        <span>5.0(30)</span>
 
                       </span>
                     </div>
@@ -645,7 +713,7 @@
                 <div class="card-content">
 
                   <h3 class="h3">
-                    <a href="#" class="card-title">710 BOYD DR, Unit #1102, Baton Rouge, LA 70808, USA</a>
+                    <a href="#" class="card-title"> Westlands, Nairobi, 00600, Kenya</a>
                   </h3>
 
                   <ul class="card-list">
@@ -655,7 +723,7 @@
                         <ion-icon name="cube-outline"></ion-icon>
                       </div>
 
-                      <span class="item-text">8000sqf</span>
+                      <span class="item-text">6000sqf</span>
                     </li>
 
                     <li class="card-item">
@@ -663,7 +731,7 @@
                         <ion-icon name="bed-outline"></ion-icon>
                       </div>
 
-                      <span class="item-text">4 Beds</span>
+                      <span class="item-text">1 Boardroom</span>
                     </li>
 
                     <li class="card-item">
@@ -671,7 +739,7 @@
                         <ion-icon name="man-outline"></ion-icon>
                       </div>
 
-                      <span class="item-text">4 Baths</span>
+                      <span class="item-text">Office Spaces</span>
                     </li>
 
                   </ul>
@@ -681,7 +749,7 @@
                     <div>
                       <span class="meta-title">Price</span>
 
-                      <span class="meta-text">$5000</span>
+                      <span class="meta-text">$4000</span>
                     </div>
 
                     <div>
@@ -696,8 +764,6 @@
                           <ion-icon name="star"></ion-icon>
                           <ion-icon name="star"></ion-icon>
                         </div>
-
-                        <span>5.0(30)</span>
 
                       </span>
                     </div>
@@ -724,7 +790,7 @@
                 <div class="card-content">
 
                   <h3 class="h3">
-                    <a href="#" class="card-title">5133 MCLAIN WAY, Baton Rouge, LA 70809, USA</a>
+                    <a href="#" class="card-title">Upperhill, Nairobi, 01500, Kenya</a>
                   </h3>
 
                   <ul class="card-list">
@@ -734,15 +800,15 @@
                         <ion-icon name="cube-outline"></ion-icon>
                       </div>
 
-                      <span class="item-text">8000sqf</span>
+                      <span class="item-text">3000sqf</span>
                     </li>
 
                     <li class="card-item">
                       <div class="item-icon">
-                        <ion-icon name="bed-outline"></ion-icon>
+                        <ion-icon name="car-outline"></ion-icon>
                       </div>
 
-                      <span class="item-text">4 Beds</span>
+                      <span class="item-text">Parking Space</span>
                     </li>
 
                     <li class="card-item">
@@ -750,7 +816,7 @@
                         <ion-icon name="man-outline"></ion-icon>
                       </div>
 
-                      <span class="item-text">4 Baths</span>
+                      <span class="item-text"> Limited Office Space</span>
                     </li>
 
                   </ul>
@@ -760,7 +826,7 @@
                     <div>
                       <span class="meta-title">Price</span>
 
-                      <span class="meta-text">$5000</span>
+                      <span class="meta-text">$2000</span>
                     </div>
 
                     <div>
@@ -772,11 +838,8 @@
                           <ion-icon name="star"></ion-icon>
                           <ion-icon name="star"></ion-icon>
                           <ion-icon name="star"></ion-icon>
-                          <ion-icon name="star"></ion-icon>
-                          <ion-icon name="star"></ion-icon>
+                          
                         </div>
-
-                        <span>5.0(30)</span>
 
                       </span>
                     </div>
@@ -807,7 +870,7 @@
           <h2 class="h2 section-title">Have Question ? Get in touch!</h2>
 
           <p class="section-text">
-            A great plateform to buy, sell and rent your properties without any agent or commisions.
+            A great platform to buy, sell and rent your properties without any agent or commisions.
           </p>
 
           <button class="btn btn-primary">
@@ -849,7 +912,7 @@
     </article>
   </main>
 
-
+</div>
 
 
 
@@ -865,11 +928,11 @@
         <div class="footer-brand">
 
           <a href="#" class="logo">
-            <ion-icon name="business-outline"></ion-icon> Realvine
+            <ion-icon name="business-outline"></ion-icon> Furaha Homes
           </a>
 
           <p class="footer-text">
-            A great plateform to buy, sell and rent your properties without any agent or commisions.
+            A great platform to buy, sell and rent your properties without any agent or commisions.
           </p>
 
         </div>
@@ -972,9 +1035,9 @@
             <ion-icon name="location-outline"></ion-icon>
 
             <address class="address">
-              C/54 Northwest Freeway,<br>
+              Kahawa West, <br>
               Suite 558,<br>
-              Houston, USA 485
+              Nairobi, Kenya
               <a href="#" class="address-link">View on Google map</a>
             </address>
           </li>
@@ -988,7 +1051,7 @@
           <li class="footer-item">
             <ion-icon name="call-outline"></ion-icon>
 
-            <a href="tel:+152534468854" class="footer-link">+152 534-468-854</a>
+            <a href="tel:+254534468854" class="footer-link">+254 534-468-854</a>
           </li>
 
         </ul>
@@ -1000,7 +1063,7 @@
       <div class="container">
 
         <p class="copyright">
-          &copy; 2022 Realvine. All Right Reserved by <a href="#" class="copyright-link">codewithsadee</a>.
+          &copy; 2022 Furaha Homes. All Right Reserved by <a href="#" class="copyright-link">Styled By Victor</a>.
         </p>
 
         <ul class="social-list">
@@ -1062,6 +1125,25 @@
   -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.1/firebase-app.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyCu5ZH2elugkAZOkZv-u9w3uryFrnvUu5s",
+      authDomain: "furaha-homes.firebaseapp.com",
+      projectId: "furaha-homes",
+      storageBucket: "furaha-homes.appspot.com",
+      messagingSenderId: "199068920435",
+      appId: "1:199068920435:web:6ab500da84def670d45806"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+  </script>
 
 </body>
 
